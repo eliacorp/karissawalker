@@ -1,0 +1,17 @@
+<div class="styling" summary="shoot page" id="styling" ng-controller="stylingCtrl">
+
+
+  <ul class="styling-ul" ng-repeat="s in Styling">
+    <li class="styling-li">
+      <a href="/styling/{{s.slug}}">
+        <h1 class="styling-h1">{{s.data['styling.title'].value[0].text}}</h1>
+      </a>
+    </li>
+
+
+  </ul>
+
+
+
+
+</div>

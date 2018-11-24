@@ -1,0 +1,17 @@
+<div class="personal" summary="shoot page" id="styling" ng-controller="stylingCtrl">
+
+
+  <ul class="personal-ul" ng-repeat="p in Personal">
+    <li class="personal-li">
+      <a href="/personal/{{p.slug}}">
+        <h1 class="personal-h1">{{p.data['personal.title'].value[0].text}}</h1>
+      </a>
+    </li>
+
+
+  </ul>
+
+
+
+
+</div>

@@ -1,0 +1,48 @@
+<div class="style" summary="style detail page" id="style" ng-controller="stylingCtrl">
+
+
+  <div class="style-content">
+
+
+    <ul class="style-collection-ul">
+      <li class="style-collection-li {{l.style.value}}" ng-repeat="l in Style.data['styling.entry'].value | orderBy: 'date'">
+        <img class="style-collection-img" src="{{l.image.value.main.url}}" alt="kw" />
+
+      </li>
+    </ul>
+
+
+
+    <ul class="style-credits">
+      <li class="style-credits-li" ng-repeat="c in Style.data['styling.credit'].value">
+
+        <div class="style-credits-p" ng-if="c.conjunction">
+          <h3 class="style-credits-h3">{{c.position.value}} {{c.conjunction.value}}</h3>
+          <span class="style-credits-span" ng-if="c.link">
+            <a href="{{c.link.value.url}}" target="_blank" >{{c.name.value}}</a>
+          </span>
+          <span class="style-credits-span" ng-if="!c.link">
+            {{c.name.value}}
+          </span>
+        </div>
+
+        <div class="style-credits-p" ng-if="!c.conjunction">
+          <h3 class="style-credits-h3">{{c.position.value}}</h3>
+          <span class="style-credits-span" ng-if="c.link">
+            <a href="{{c.link.value.url}}" target="_blank" >{{c.name.value}}</a>
+          </span>
+          <span class="style-credits-span" ng-if="!c.link">
+            {{c.name.value}}
+          </span>
+        </div>
+
+      </li>
+
+    </ul>
+
+  </div>
+
+
+
+
+</div>
